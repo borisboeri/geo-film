@@ -1,0 +1,87 @@
+<!DOCTYPE html >
+<html ng-app="myApp">
+
+  <head>
+    <meta charset="UTF-8">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+    <script type="text/javascript" src="./vendor/angular/angular.js"></script>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script src="typed.js" type="text/javascript"></script>
+    <script src="progressbar.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../Materialize/css/materialize.min.css">
+    <script type="text/javascript" src="../Materialize/js/materialize.min.js"></script>
+    <link rel='stylesheet' type='text/css' href="./css/styles.css" />
+  	<title>GeograFilm</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+
+    	<nav>
+        <div class="nav-wrapper ">
+          <a href="#!" class="brand-logo center" id="typed"></a>
+          <ul class="left hide-on-med-and-down tabs_head">
+            <li class="active" ><a href="#!He">Heatmap</a></li>
+            <li><a>Liste</a></li>
+
+          </ul>
+        </div>
+      </nav>
+
+
+          <div>
+                <!--{{storectrl.selectedTab}}-->
+                <h4 class="white-text center" ></h4>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+        var titre = {
+        strings: ["Lieux de tournages à Paris"],
+        typeSpeed: 40,
+        showCursor: false,
+        startDelay : 200
+      }
+      var typed = new Typed("#typed", titre);
+      });
+    </script>
+    <!-- Main Content -->
+    <div class="row" id="contenu_main" >
+      <div class="col s12 m12 l8"><div id='map' ></div></div>
+
+      <div class="col s12 m12 l4">
+        <div class="card-panel" id="slider_one">
+          <h5>Détail : </h5>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="50" value="25" class="slider" id="myRange">
+          </div>
+        </div>
+        <div class="card-panel" id="slider_one">
+          <h5>Intensité : </h5>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="80" class="slider" id="myRange_deux">
+          </div>
+        </div>
+
+        <div class="card-panel">
+          <h5>Nombre de films tournés</h5>
+
+          <div id="container"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Chargement Mapbox -->
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic3RlcGhhbmVnY3JkIiwiYSI6ImNqZWswajBlYTA4eXczMm1naGxjajd4NWEifQ.SKjX76AT7erUaf5pe9t-Mw';
+          var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/dark-v9',
+          center: [2.3333, 48.866667],
+          zoom: 15
+        });
+    </script>
+    <!-- Chargement script de la map -->
+    <script type="text/javascript" src="./js/script_maps.js"></script>
+  </body>
+
+</html>

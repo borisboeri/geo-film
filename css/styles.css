@@ -1,0 +1,123 @@
+/* 342A21 Foncé
+rouge DA667B
+vert 71816D
+violet DBBBF5
+brun C9B79C */
+
+html{
+	background-color: #342A21 ;
+}
+
+.nav-wrapper{
+	background-color: #DA667B;
+}
+
+#map {
+  overflow:hidden;
+  border-radius: 3px;
+  margin-top: 8px;
+    padding-bottom:56.25%;
+    position:relative;
+    box-shadow: 0px 0px 10px black;
+    height:;
+
+
+ }
+
+
+
+.tabs_head{
+	border-bottom: solid 1px #000;
+
+}
+
+.tabs_head>span{
+	display:inline-block;
+	cursor:pointer;
+	padding: 3px 3px;
+	border-right: solid 1px #000;
+	color : #000;
+	background-color: #686de0;
+	transition: all 0.7s ease;
+}
+
+.tabs_head>span.tab_selected{
+	color:#000;
+	background-color: #fff;
+	font-weight: bold;
+}
+
+.tabs_content>div{
+	display: block;
+	overflow:hidden;
+	max-height: 0px;
+	transition: all 0.7s ease;
+
+}
+
+.tabs_content>div.tab_selected{
+	max-height: 100px;
+}
+
+.slider {
+
+    width: 10%;
+    height: 15px;
+    border-radius: 5px;   
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background: #DA667B;
+  box-shadow: 0px 0px 5px #DA667B;
+  cursor: pointer;
+  margin-top: -10px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background: #DA667B;
+  box-shadow: 0px 0px 5px #DA667B;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background: #DA667B;
+  box-shadow: 0px 0px 5px #DA667B;
+  cursor: pointer;
+}
+
+#typed{
+  font-family: Courier New;
+}
+
+#titre_site{
+  font-family: Courier New;
+}
+
+h5{
+  font-size: 20px;
+}
+
+#container {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+
+  position: relative;
+}
+
+
+

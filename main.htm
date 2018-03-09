@@ -1,0 +1,36 @@
+<div class="row" id="contenu_main" >
+      <div class="col s12 m12 l8"><div id='map' ></div></div>
+              
+      <div class="col s12 m12 l4">
+        <div class="card-panel" id="slider_one">
+          <h5>Détail : </h5>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="50" value="25" class="slider" id="myRange">
+          </div>
+        </div>
+        <div class="card-panel" id="slider_one">
+          <h5>Intensité : </h5>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="80" class="slider" id="myRange_deux">
+          </div>
+        </div>
+
+        <div class="card-panel">
+          <h5>Nombre de films tournés</h5>
+
+          <div id="container"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Chargement Mapbox -->
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic3RlcGhhbmVnY3JkIiwiYSI6ImNqZWEwMDJ0MDBybjcycXFoMTE5em5rdG8ifQ.vn3E36UuYEHpFpH3MVXfYA';
+          var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/dark-v9',
+          center: [2.3333, 48.866667],
+          zoom: 15
+        });
+    </script>
+    <!-- Chargement script de la map -->
+    <script type="text/javascript" src="./js/script_maps.js"></script>
